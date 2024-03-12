@@ -1,0 +1,15 @@
+{%  extends 'base.html' %}
+
+{% block title %} Add Food {% endblock %}
+
+{% block header %} Add a New Food: {% endblock %}
+
+{% block content %}
+    <form action="" method=POST>
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <input type="submit" value="Save New Food">
+    </form>
+{% endblock %}
