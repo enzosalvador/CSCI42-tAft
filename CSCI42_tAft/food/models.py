@@ -11,3 +11,18 @@ class FoodModel(models.Model):
     fat_per_serving = models.IntegerField()
     carbs_per_serving = models.IntegerField()
 
+class FoodConsumed(models.Model):
+    user_food = models.IntegerField(primary_key=True, null=False)
+    model = model.ForeignKey(
+        'signup.UserModel',
+        on_delete=models.RESTRICT,
+        null=False)
+    model = model.ForeignKey(
+        FoodModel,
+        on_delete=models.RESTRICT,
+        null=False)
+    servings = models.IntegerField()
+    consumed_date = models.DateTimeField()
+
+    def __str__(self):
+        return self.user_food
