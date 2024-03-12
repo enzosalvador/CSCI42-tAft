@@ -1,0 +1,35 @@
+{%  extends 'base.html' %}
+
+{% block title %} Food Information {% endblock %}
+
+{% block header %} Food Information {% endblock %}
+
+{% block content %}
+<div id = "object_container">
+    <h2>Food</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Food Name</th>
+                <th>Calories per Serving</th>
+                <th>Carbohydrates per Serving</th>
+                <th>Proteins per Serving</th>
+                <th>Fats per Serving</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for food in foods %}
+                <tr>
+                    <td><a href="food/{{ food.pk }}/details/" class="item"> {{ food.food_name }} </a></td>
+                    <td>{{ food.calories_per_serving }}</td>
+                    <td>{{ food.carbs_per_serving }}</td>
+                    <td>{{ food.proteins_per_serving }}</td>
+                    <td>{{ food.fats_per_serving }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <li>
+        <a href="food/add/" class="item">New Food</a>
+    </li>
+{% endblock %}
