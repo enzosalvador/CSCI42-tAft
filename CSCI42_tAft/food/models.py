@@ -11,6 +11,15 @@ class FoodModel(models.Model):
     fat_per_serving = models.IntegerField()
     carbs_per_serving = models.IntegerField()
 
+    def __str__(self):
+        return self.food_id
+
+    def get_absolute_url(self):
+        return reverse('food:food-item', kwargs={'pk': self.pk})
+
+    def get_update_url(self):
+        return reverse('food:food-edit', kwargs={'pk': self.pk})
+
 class FoodConsumed(models.Model):
     user_food = models.IntegerField(primary_key=True, null=False)
     model = models.ForeignKey(
@@ -26,3 +35,4 @@ class FoodConsumed(models.Model):
 
     def __str__(self):
         return self.user_food
+
