@@ -13,11 +13,11 @@ class FoodModel(models.Model):
 
 class FoodConsumed(models.Model):
     user_food = models.IntegerField(primary_key=True, null=False)
-    model = model.ForeignKey(
+    model = models.ForeignKey(
         'signup.UserModel',
         on_delete=models.RESTRICT,
         null=False)
-    model = model.ForeignKey(
+    model = models.ForeignKey(
         FoodModel,
         on_delete=models.RESTRICT,
         null=False)
