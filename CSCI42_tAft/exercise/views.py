@@ -12,12 +12,12 @@ class ExerciseDetailsView(DetailView):
 
 class AddExerciseView(CreateView):
     model = ExerciseModel
-    form_class = ExerciseModelForm
+    form_class = ExerciseForm
     template_name = 'exercise/exercise-add.html'
 
 class EditExerciseView(UpdateView):
     model = ExerciseModel
-    form_class = ExerciseModelForm
+    form_class = ExerciseForm
     template_name = 'exercise/exercise-edit.html'
 
 def index(request):
