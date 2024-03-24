@@ -1,0 +1,28 @@
+{%  extends 'base.html' %}
+
+{% block title %} Exercise Information {% endblock %}
+
+{% block header %} Exercise Information {% endblock %}
+
+{% block content %}
+<div id = "object_container">
+    <h2>Exercise</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Exercise Name</th>
+                <th>Calories Burned per Hour</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for exercise in exercises %}
+                <tr>
+                    <td><a href="exercise/{{ exercise.pk }}/details/" class="item"> {{ exercise.exercise_name }} </a></td>
+                    <td>{{ exercise.calories_burned_per_hour }}</td>
+            {% endfor %}
+        </tbody>
+    </table>
+    <li>
+        <a href="exercise/add/" class="item">New Exercise</a>
+    </li>
+{% endblock %}
