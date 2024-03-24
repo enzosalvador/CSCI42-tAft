@@ -1,0 +1,21 @@
+{%  extends 'base.html' %}
+
+{% block title %} {{ object.exercise_id }} {% endblock %}
+
+{% block header %} {{ object.exercise_id }} {% endblock %}
+
+{% block content %}
+    <p>
+        Exercise Name: {{ object.exercise_name }} <br>
+        Calories Burned per Hour: {{ object.calories_burned_per_hour }} <br>
+    </p>
+    <li>
+        <a href="{{ object.get_update_url }}" class="item">Edit Exercise</a>
+    </li>
+{% endblock %}
+
+{% block navbar %}
+    <div id = "navbar">
+        <a href = "/exercise/">Exercise</a>
+    </div>
+{% endblock %}

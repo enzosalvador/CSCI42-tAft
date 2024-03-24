@@ -1,0 +1,15 @@
+{%  extends 'base.html' %}
+
+{% block title %} Edit Exercise {% endblock %}
+
+{% block header %} Edit Exercise: {% endblock %}
+
+{% block content %}
+    <form action="" method=POST>
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <input type="submit" value="Save Changes to Exercise">
+    </form>
+{% endblock %}
