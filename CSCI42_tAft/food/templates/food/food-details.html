@@ -1,0 +1,24 @@
+{%  extends 'base.html' %}
+
+{% block title %} {{ object.food_id }} {% endblock %}
+
+{% block header %} {{ object.food_id }} {% endblock %}
+
+{% block content %}
+    <p>
+        Food Name: {{ object.food_name }} <br>
+        Calories per Serving: {{ object.calories_per_serving }} <br>
+        Carbohydrates per Serving: {{ object.carbs_per_serving }} <br>
+        Proteins per Serving: {{ object.proteins_per_serving }} <br>
+        Fats per Serving: {{ object.fats_per_serving }} <br>
+    </p>
+    <li>
+        <a href="{{ object.get_update_url }}" class="item">Edit Food</a>
+    </li>
+{% endblock %}
+
+{% block navbar %}
+    <div id = "navbar">
+        <a href = "/food/">Food</a>
+    </div>
+{% endblock %}

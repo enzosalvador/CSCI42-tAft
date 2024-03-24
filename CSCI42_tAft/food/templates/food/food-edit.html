@@ -1,0 +1,15 @@
+{%  extends 'base.html' %}
+
+{% block title %} Edit Food {% endblock %}
+
+{% block header %} Edit TFood: {% endblock %}
+
+{% block content %}
+    <form action="" method=POST>
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <input type="submit" value="Save Changes to Food">
+    </form>
+{% endblock %}
