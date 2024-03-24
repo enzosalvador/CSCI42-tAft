@@ -1,5 +1,5 @@
 from django.db import models
-from django.db import reverse
+from django.urls import reverse
 from food.models import FoodModel
 from exercise.models import ExerciseModel
 from signup.models import UserModel
