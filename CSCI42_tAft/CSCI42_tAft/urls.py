@@ -18,12 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
-    # path("myactivity/", include('myactivity.urls', namespace="myactivity")),
+    path('admin/', admin.site.urls),
+    path("myactivity/", include('myactivity.urls', namespace="myactivity")),
     path("food/", include('food.urls', namespace="food")),
-    # path("exercise/", include('exercise.urls', namespace="exercise")),
-    # path("login/", include('login.urls', namespace="login")),
-    # path("signup/", include('signup.urls', namespace="signup")),
-    # path("userprofile/", include('user.urls', namespace="userprofile")),
-    # path("forum/", include('forum.urls', namespace="forum")),
+    path("exercise/", include('exercise.urls', namespace="exercise")),
+    path("login/", include('login.urls', namespace="login")),
+    path("signup/", include('signup.urls', namespace="signup")),
+    path("userprofile/", include('userprofile.urls', namespace="userprofile")),
+    path("forum/", include('forum.urls', namespace="forum")),
 ]

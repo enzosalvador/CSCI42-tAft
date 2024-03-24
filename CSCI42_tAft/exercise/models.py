@@ -7,6 +7,6 @@ class ExerciseModel(models.Model):
     calories_burned_per_hour = models.IntegerField()
 
     def __str__(self):
-            return self.exercise_id
+            return self.exercise_name
 
  
