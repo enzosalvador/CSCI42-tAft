@@ -7,6 +7,11 @@ class ExerciseModel(models.Model):
     calories_burned_per_hour = models.IntegerField()
 
     def __str__(self):
-            return self.exercise_name
+        return self.exercise_name
 
+    def get_absolute_url(self):
+        return reverse('exercise:exercise-item', kwargs={'pk': self.pk})
+
+    def get_update_url(self):
+        return reverse('exercise:exercise-edit', kwargs={'pk': self.pk})
  
