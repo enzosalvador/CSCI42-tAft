@@ -26,5 +26,9 @@ urlpatterns = [
     path("signup/", include('signup.urls', namespace="signup")),
     path("userprofile/", include('userprofile.urls', namespace="userprofile")),
     path("forum/", include('forum.urls', namespace="forum")),
+<<<<<<< HEAD
  #   path("registration/", include('registration.urls', namespace="registration")),
+=======
+    path("", include(("registration.urls", "registration"), "registration")),
+>>>>>>> registration
 ]

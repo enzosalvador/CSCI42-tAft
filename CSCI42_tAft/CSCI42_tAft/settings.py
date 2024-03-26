@@ -44,7 +44,11 @@ INSTALLED_APPS = [
     'myactivity',
     'signup',
     'userprofile',
+<<<<<<< HEAD
 #    'registration',
+=======
+    'registration',
+>>>>>>> registration
 ]
 
 MIDDLEWARE = [
@@ -63,7 +67,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates'),
-                 'templates'],
+                 'templates'], 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,3 +134,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = "registration:home"
+LOGOUT_REDIRECT_URL = "registration:login"
