@@ -44,11 +44,7 @@ INSTALLED_APPS = [
     'myactivity',
     'signup',
     'userprofile',
-<<<<<<< HEAD
-#    'registration',
-=======
     'registration',
->>>>>>> registration
 ]
 
 MIDDLEWARE = [
