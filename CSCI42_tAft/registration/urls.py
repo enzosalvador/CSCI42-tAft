@@ -6,3 +6,5 @@ urlpatterns = [
     path("signup/", authView, name="authView"),
     path("accounts/", include("django.contrib.auth.urls")),
 ]
+
+app_name = "registration"
