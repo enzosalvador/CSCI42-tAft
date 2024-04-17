@@ -40,9 +40,7 @@ INSTALLED_APPS = [
     'exercise',
     'food',
     'forum',
-    'login',
     'myactivity',
-    'signup',
     'userprofile',
     'registration',
 ]

@@ -1,0 +1,26 @@
+{%  extends 'base.html' %}
+
+{% block title %} {{ object.user_id }} {% endblock %}
+
+{% block header %} User Profile {% endblock %}
+
+{% block content %}
+    <p>
+        first name: {{ object.first_name }} <br>
+        last name: {{ object.last_name }} <br>
+        email: {{ object.email }} <br>
+        height: {{ object.height }} <br>
+        weight: {{ object.weight }} <br>
+    </p>
+    <td>
+        <a href="{{ object.get_update_url }}" class="item">Edit User Information</a>
+    </td>
+{% endblock %}
+
+{% block navbar %}
+    <div id = "navbar">
+        <a href = "/userprofile/">List of Users</a>
+    </div>
+    <td><a href="/food/" class="item"> {{ "View Food Options" }} </a></td>
+    <td><a href="/exercise/" class="item"> {{ "View Exercise Options" }} </a></td>
+{% endblock %}

@@ -22,8 +22,6 @@ urlpatterns = [
     path("myactivity/", include('myactivity.urls', namespace="myactivity")),
     path("food/", include('food.urls', namespace="food")),
     path("exercise/", include('exercise.urls', namespace="exercise")),
-    path("login/", include('login.urls', namespace="login")),
-    path("signup/", include('signup.urls', namespace="signup")),
     path("userprofile/", include('userprofile.urls', namespace="userprofile")),
     path("forum/", include('forum.urls', namespace="forum")),
     path("", include(("registration.urls", "registration"), "registration")),
