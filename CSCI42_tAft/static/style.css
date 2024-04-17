@@ -1,0 +1,136 @@
+@import url('//fonts.googleapis.com/css?family=Poppins');
+
+html{
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a {
+    color: #fff; /* Setting font color to white */
+    text-decoration: none; /* Removing underline */
+}
+
+h1,
+h2 {
+    color: #fff; /* Setting font color to white */
+    text-align: center; /* Centering the text */
+}
+
+table {
+    width: 800px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centering the table */
+    border-radius: 10px; /* Adding border radius */
+}
+
+th,
+td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+th {
+    text-align: left;
+    background-color: #55608f; /* Changing header background color */
+    border-bottom: 2px solid #fff; /* Adding border to header cells */
+}
+
+tbody tr {
+    transition: background-color 0.3s; /* Adding transition effect */
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+tbody td {
+    position: relative;
+}
+
+tbody td:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+}
+
+form {
+    margin: 0 auto;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+form input[type="submit"] {
+    background-color: #55608f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #445279;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"]{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+}
+
+form select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+}
+
+form select:hover {
+    border-color: #888;
+}
+
+form select:focus {
+    border-color: #55608f;
+    outline: none;
+}
+
+
+
+/* Add more styles as needed */

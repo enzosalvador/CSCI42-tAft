@@ -8,8 +8,8 @@ class UserProfileModel(models.Model):
     first_name = models.CharField(max_length = 50, default = "")
     last_name = models.CharField(max_length = 50, default = "")
     email = models.CharField(max_length = 50, default = "")
-    height = models.DecimalField(max_digits=5, decimal_places=2, default = 0)
-    weight = models.DecimalField(max_digits=5, decimal_places=2, default = 0)
+    height = models.DecimalField(max_digits=5, decimal_places=2, default = "Height")
+    weight = models.DecimalField(max_digits=5, decimal_places=2, default = "Weight")
 
     def __str__(self):
          return self.first_name
