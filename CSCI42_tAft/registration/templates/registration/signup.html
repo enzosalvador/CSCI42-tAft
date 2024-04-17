@@ -1,5 +1,6 @@
 <form method="POST">
     {% csrf_token %}
     {{form}}
-    <button type="submit">Submit</button>
+    <button type="submit">Join the Community</button>
+    <div><td><a href="/accounts/login/" class="item"> {{ "Have an account already? Sign in!" }} </a></td></div>
 </form>
