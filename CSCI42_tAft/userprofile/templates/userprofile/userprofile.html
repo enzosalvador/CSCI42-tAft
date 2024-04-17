@@ -20,7 +20,7 @@
         <tbody>
             {% for userprofile in userprofiles %}
                 <tr>
-                    <td>{{ userprofile.first_name }}</td>
+                    <td><a href="userprofile/{{ userprofile.pk }}/details/" class="item"> {{ userprofile.first_name }} </a></td>
                     <td>{{ userprofile.last_name }}</td>
                     <td>{{ userprofile.email }}</td>
                     <td>{{ userprofile.height }}</td>
