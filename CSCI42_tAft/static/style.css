@@ -1,11 +1,11 @@
-@import url('//fonts.googleapis.com/css?family=Poppins');
+@import url('//fonts.googleapis.com/css?family=Lora');
 
 html{
     height: 100%;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lora', sans-serif;
     font-weight: 100;
-    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    background: linear-gradient(45deg, #C0DBFF, white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,14 +19,14 @@ html{
 }
 
 a {
-    color: #fff; /* Setting font color to white */
-    text-decoration: none; /* Removing underline */
+    color: #001B40; 
+    text-decoration: none;
 }
 
-h1,
 h2 {
-    color: #fff; /* Setting font color to white */
-    text-align: center; /* Centering the text */
+    color: #001B40;
+    text-align: center;
+    font-weight: bold;
 }
 
 table {
@@ -34,25 +34,28 @@ table {
     border-collapse: collapse;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; /* Centering the table */
-    border-radius: 10px; /* Adding border radius */
+    margin: 0 auto;
+    border-radius: 10px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 th,
 td {
     padding: 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #fff;
+    background-color: rgba(154, 171, 249, 0.2);
+    color: #001B40;
 }
 
 th {
     text-align: left;
-    background-color: #55608f; /* Changing header background color */
-    border-bottom: 2px solid #fff; /* Adding border to header cells */
+    background-color: #001B40; 
+    border-bottom: 2px solid #001B40; 
+    color: white;
 }
 
 tbody tr {
-    transition: background-color 0.3s; /* Adding transition effect */
+    transition: background-color 0.3s; 
 }
 
 tbody tr:hover {
@@ -85,8 +88,8 @@ form {
 }
 
 form input[type="submit"] {
-    background-color: #55608f;
-    color: #fff;
+    background-color: #001B40;
+    color: #001B40;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -127,10 +130,62 @@ form select:hover {
 }
 
 form select:focus {
-    border-color: #55608f;
+    border-color: #001B40;
     outline: none;
 }
 
+a.item[href="userprofile/add/"],
+a.item[href="food/add/"],
+a.item[href="exercise/add/"] {
+    display: inline-block;
+    padding: 10px 10px 10px; /* Added more padding to the top */
+    background-color: #001B40;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center; /* Center the text horizontally */
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Convert it into a block-level element to allow margin auto to work */
+    width: 200px;
+}
 
+a.item[href="userprofile/add/"]:hover,
+a.item[href="food/add/"]:hover,
+a.item[href="exercise/add/"]:hover {
+    background-color: #445279;
+}
 
-/* Add more styles as needed */
+.navbar {
+    background-color: #001B40;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    margin-left: auto; /* Center the navbar horizontally */
+    margin-right: auto; /* Center the navbar horizontally */
+    display: flex;
+    justify-content: right;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.navbar img {
+    height: 50px;
+}
+
+.nav-item {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background-color: #445279;
+}
