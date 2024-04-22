@@ -89,7 +89,7 @@ form {
 
 form input[type="submit"] {
     background-color: #001B40;
-    color: #001B40;
+    color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -138,15 +138,15 @@ a.item[href="userprofile/add/"],
 a.item[href="food/add/"],
 a.item[href="exercise/add/"] {
     display: inline-block;
-    padding: 10px 10px 10px; /* Added more padding to the top */
+    padding: 10px 10px 10px;
     background-color: #001B40;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
-    text-align: center; /* Center the text horizontally */
-    margin: 0 auto; /* Center the button horizontally */
-    display: block; /* Convert it into a block-level element to allow margin auto to work */
+    text-align: center;
+    margin: 0 auto; 
+    display: block; 
     width: 200px;
 }
 
@@ -165,8 +165,8 @@ a.item[href="exercise/add/"]:hover {
     z-index: 1000;
     left: 0;
     right: 0;
-    margin-left: auto; /* Center the navbar horizontally */
-    margin-right: auto; /* Center the navbar horizontally */
+    margin-left: auto;
+    margin-right: auto; 
     display: flex;
     justify-content: right;
     padding: 0px;
@@ -189,3 +189,43 @@ a.item[href="exercise/add/"]:hover {
 .nav-item:hover {
     background-color: #445279;
 }
+
+.btns{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #445279;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.item {
+    text-decoration: underline;
+}
+
+.new-navbar {
+    background-color: #001B40;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto; 
+    display: flex;
+    justify-content: right;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.new-navbar img {
+    height: 50px;
+}
+
