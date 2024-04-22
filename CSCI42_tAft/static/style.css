@@ -23,10 +23,11 @@ a {
     text-decoration: none;
 }
 
-h2 {
+h1, h2 {
     color: #001B40;
     text-align: center;
     font-weight: bold;
+    font-size: 50px;
 }
 
 table {
@@ -229,3 +230,30 @@ a.item[href="exercise/add/"]:hover {
     height: 50px;
 }
 
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image-container {
+    margin-right: 20px; /* Adjust as needed */
+    margin-left:0px;
+}
+
+.form-container {
+    width: 600px; /* Adjust as needed */
+}
+
+img[alt="LeBron"] {
+    height: 700px;
+    border-left: 0px;
+}
+
+.username-requirements,
+.password-requirements,
+.password-note {
+    font-size: 11px;
+    color: #3a495f;
+}

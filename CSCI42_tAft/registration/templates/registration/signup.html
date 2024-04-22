@@ -1,14 +1,42 @@
 {% extends 'base.html' %}
+
 {% block navbar %}
 <div class="new-navbar">
     <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/436451604_470872335366746_4854891249917634860_n.png?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEzX2EYA4geaVKEatrhkgxkJzGiBP1KYfInMaIE_Uph8q60F-FzDmXm6uWjIPTwzZlVoxqJD1_bkPw0unZvvNHh&_nc_ohc=bUiOLm1GNaYAb5JXVWJ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QF4fRzzd8Nb_-rF7u3-1S7yRGTNITdDCvSMJmqTZnQIZg&oe=66488556" alt="Logo">
 </div>
 {% endblock %}
+
 {% block content %}
-<form method="POST">
-    {% csrf_token %}
-    {{form}}
-    <button type="submit" class="btns">Join the Community</button>
-    <div><td><a href="/accounts/login/" class="item"> {{ "Have an account already? Sign in!" }} </a></td></div>
-</form>
+<div class="login-container">
+    <div class="image-container">
+        <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/439646001_1374783983217871_7726178429620441190_n.png?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGRpRW2VQwMP71QcLAZvYwHVxyqGj4TVuhXHKoaPhNW6LmSUlM-euok6mZSeQCc7_IrCJMfdRaqZnq6Kwm3-TZm&_nc_ohc=pLJsQVox5o0Ab6r4gFD&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QEs9shuOWWBZAMtyS4E42qUeSmTJEZYSPLHzY26fpj-zA&oe=664DDB54" alt="LeBron">
+    </div>
+    <div class="form-container">
+        <h1>The Ateneo<br>Fitness Tracker</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            <div class="form-group">
+                <label for="{{ form.username.id_for_label }}">Username:</label>
+                {{ form.username }}
+                <div class="username-requirements">
+                    Your username must be unique and can contain letters, numbers, underscores, and hyphens.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="{{ form.password1.id_for_label }}">Password:</label>
+                {{ form.password1 }}
+                <div class="password-requirements">
+                    Your password must contain at least 8 characters, including uppercase, lowercase letters, and numbers.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="{{ form.password2.id_for_label }}">Confirm Password:</label>
+                {{ form.password2 }}
+            </div>
+            <button type="submit" class="btns">Join the Community</button>
+            <div><a href="/accounts/login/" class="item">Have an account already? Sign in!</a></div>
+        </form>
+    </div>
+</div>
 {% endblock %}
