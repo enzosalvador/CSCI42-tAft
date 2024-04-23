@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block title %}
+{{ object.title }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ object.title }}</h1>
+        <body>
+            {{ object.author.first_name }} {{ object.author.last_name }}<br>
+            {{ object.pub_datetime|date:"m/d/Y, h:i A" }}<br>
+            {{ object.body }}<br><br>
+    
+        </body>
+
+        <form action="{% url 'forum:reply_edit' post_pk=object.forum_post.pk reply_pk=object.pk %}" method="get">
+            <button type="submit">Edit Reply</button>
+        </form>
+
+        <a href="{% url 'forum:forumpost_details' pk=object.forum_post.pk %}">Return to Forum Post</a>
+        
+{% endblock %}
+

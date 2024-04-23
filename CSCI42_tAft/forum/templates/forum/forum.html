@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} tAft Forum {% endblock %}
+{% block content %}
+
+<h1>tAft Forum Lobby</h1>
+
+<body>
+<h3>Current Topics:</h3>
+{% for post in forumposts %}
+    <li>
+        <a href="{{ post.get_absolute_url }}">
+                {{ post.title }} by {{ post.author.first_name }} {{ post.author.last_name }}
+        </a>
+    </li>
+{% endfor %}
+</body> <br>
+
+<form action="forumposts/add">
+    <button type="submit">New Post</button> 
+</form> <br>
+
+{% endblock %}
+

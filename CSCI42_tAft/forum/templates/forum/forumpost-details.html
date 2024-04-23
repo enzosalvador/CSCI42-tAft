@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+
+{% block title %}
+{{ object.title }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ object.title }}</h1>
+        <body>
+            Thread creator: {{ object.author.first_name }} {{ object.author.last_name }}<br>
+            Thread creation period: {{ object.pub_datetime|date:"m/d/Y, h:i A" }}<br>
+            <h3>Content:</h3>
+            {{ object.body }}<br><br>
+            
+            {% for post in forumposts %}
+                <li>
+                    <a href="{{ post.get_absolute_url }}">
+                            {{ post.title }} by {{ post.author.first_name }} {{ post.author.last_name }}
+                    </a>
+                </li>
+            {% endfor %}
+            </body> <br>
+
+            <form action="reply/add">
+                <button type="submit">Reply</button> 
+            </form> <br>
+
+            <h4>Replies:</h4>
+            {% for reply in replies %}
+            {% if reply.forum_post == object %}
+                by {{ reply.author.first_name }} {{ reply.author.last_name }}<br>
+                {{ reply.pub_datetime|date:"m/d/Y, h:i A" }}<br>
+                {{ reply.body }}<br><br>
+            {% endif %}
+            {% endfor %}
+        </body>
+
+        <form action="./edit">
+            <br><button type="submit">Edit Post</button>
+        </form>
+
+        <a href = "/forum/">Forum Lobby</a>
+        
+{% endblock %}
+

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Add Reply {% endblock %}
+{% block content %}
+    {{ form.non_field_errors }}
+    {% for field in form %}
+        {% if field.errors %}
+            <p> {{ field.label }} has the following errors:</p>
+            <ul>
+            {% for error in field.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endfor %}
+    <p>Reply: </p>
+    <form method = "post">
+        {% csrf_token %}
+        {% for field in form %}
+            {{field.label}}: {{field}}<br><br>
+        {% endfor %}
+        &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Save Reply"> 
+    </form>
+{% endblock %}  
