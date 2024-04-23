@@ -1,12 +1,11 @@
 {%  extends 'base.html' %}
 
-{% block title %} User Profile Information {% endblock %}
+{% block title %} Users {% endblock %}
 
-{% block header %} User Profile Information {% endblock %}
+{% block header %} Users {% endblock %}
 
 {% block content %}
 <div id = "object_container">
-    <h2>Users</h2>
     <table>
         <thead>
             <tr>
@@ -32,4 +31,9 @@
     <td>
         <a href="userprofile/add/" class="item">Add Profile Information</a>
     </td>
+    <div>
+    <td><a href="/food/" class="item"> {{ "Food List" }} </a></td>
+    <td><a href="/exercise/" class="item"> {{ "Exercise List" }} </a></td>
+    <td><a href="/forum/" class="item"> {{ "Forum" }} </a></td>
+    </div>
 {% endblock %}
