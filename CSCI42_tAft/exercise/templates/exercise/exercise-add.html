@@ -4,12 +4,20 @@
 
 {% block header %} Add a New Exercise: {% endblock %}
 
+{% block navbar %}
+<div class="navbar">
+    <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/436451604_470872335366746_4854891249917634860_n.png?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEzX2EYA4geaVKEatrhkgxkJzGiBP1KYfInMaIE_Uph8q60F-FzDmXm6uWjIPTwzZlVoxqJD1_bkPw0unZvvNHh&_nc_ohc=bUiOLm1GNaYAb5JXVWJ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QF4fRzzd8Nb_-rF7u3-1S7yRGTNITdDCvSMJmqTZnQIZg&oe=66488556" alt="Logo">
+    <a href="/food/" class="nav-item">Food List</a>
+    <a href="/userprofile/" class="nav-item">Users</a>
+</div>
+{% endblock %}
+
 {% block content %}
     <form action="" method=POST>
         {% csrf_token %}
 
         {{ form.as_p }}
 
-        <input type="submit" value="Save New Exercise">
+        <input type="submit" value="Save New Exercise" class="save-button">
     </form>
 {% endblock %}

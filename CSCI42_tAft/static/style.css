@@ -1,0 +1,259 @@
+@import url('//fonts.googleapis.com/css?family=Lora');
+
+html{
+    height: 100%;
+    margin: 0;
+    font-family: 'Lora', sans-serif;
+    font-weight: 100;
+    background: linear-gradient(45deg, #C0DBFF, white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a {
+    color: #001B40; 
+    text-decoration: none;
+}
+
+h1, h2 {
+    color: #001B40;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+table {
+    width: 800px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    border-radius: 10px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+th,
+td {
+    padding: 15px;
+    background-color: rgba(154, 171, 249, 0.2);
+    color: #001B40;
+}
+
+th {
+    text-align: left;
+    background-color: #001B40; 
+    border-bottom: 2px solid #001B40; 
+    color: white;
+}
+
+tbody tr {
+    transition: background-color 0.3s; 
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+tbody td {
+    position: relative;
+}
+
+tbody td:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+}
+
+form {
+    margin: 0 auto;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+form input[type="submit"] {
+    background-color: #001B40;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #445279;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"]{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+}
+
+form select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+}
+
+form select:hover {
+    border-color: #888;
+}
+
+form select:focus {
+    border-color: #001B40;
+    outline: none;
+}
+
+a.item[href="userprofile/add/"],
+a.item[href="food/add/"],
+a.item[href="exercise/add/"] {
+    display: inline-block;
+    padding: 10px 10px 10px;
+    background-color: #001B40;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+    margin: 0 auto; 
+    display: block; 
+    width: 200px;
+}
+
+a.item[href="userprofile/add/"]:hover,
+a.item[href="food/add/"]:hover,
+a.item[href="exercise/add/"]:hover {
+    background-color: #445279;
+}
+
+.navbar {
+    background-color: #001B40;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto; 
+    display: flex;
+    justify-content: right;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.navbar img {
+    height: 50px;
+}
+
+.nav-item {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background-color: #445279;
+}
+
+.btns{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #445279;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.item {
+    text-decoration: underline;
+}
+
+.new-navbar {
+    background-color: #001B40;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto; 
+    display: flex;
+    justify-content: right;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.new-navbar img {
+    height: 50px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image-container {
+    margin-right: 20px; /* Adjust as needed */
+    margin-left:0px;
+}
+
+.form-container {
+    width: 600px; /* Adjust as needed */
+}
+
+img[alt="LeBron"] {
+    height: 700px;
+    border-left: 0px;
+}
+
+.username-requirements,
+.password-requirements,
+.password-note {
+    font-size: 11px;
+    color: #3a495f;
+}
