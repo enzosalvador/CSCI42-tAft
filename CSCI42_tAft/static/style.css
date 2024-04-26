@@ -257,3 +257,38 @@ img[alt="LeBron"] {
     font-size: 11px;
     color: #3a495f;
 }
+
+button[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #445279;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+form[action="/forumposts/add"] button[type="submit"] {
+    margin: 100px;
+}
+
+.forum-post {
+    font-weight: bold;
+    color: blue;
+}
+
+.forum-post-author {
+    /* Add styles for author name, e.g., font-style: italic */
+}
+
+.post-link {
+    color: red;
+    text-decoration: none;
+}
+
