@@ -278,17 +278,16 @@ form[action="/forumposts/add"] button[type="submit"] {
     margin: 100px;
 }
 
-.forum-post {
-    font-weight: bold;
-    color: blue;
+.table-container {
+    max-height: 300px; /* Set the maximum height for the table container */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
-
-.forum-post-author {
-    /* Add styles for author name, e.g., font-style: italic */
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
-
-.post-link {
-    color: red;
-    text-decoration: none;
+th, td {
+    padding: 8px;
+    text-align: left;
 }
 
